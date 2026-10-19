@@ -1,4 +1,4 @@
-
+.SUFFIXES:
 # Chicago Burnout - Nintendo 3DS
 
 TARGET := ChicagoBurnout
@@ -11,4 +11,4 @@ APP_TITLE := Chicago Burnout
 APP_DESCRIPTION := Open-city prototype
 APP_AUTHOR := Asenix
 
-include $(DEVKITPRO)/libctru/3ds_rules
+include $(DEVKITARM)/3ds_rules
