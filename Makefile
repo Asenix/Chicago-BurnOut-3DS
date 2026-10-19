@@ -11,4 +11,4 @@ APP_TITLE := Chicago Burnout
 APP_DESCRIPTION := Open-city prototype
 APP_AUTHOR := Asenix
 
-include $(DEVKITPRO)/libctru/default_makefile
+include $(DEVKITPRO)/libctru/3ds_rules
