@@ -1,0 +1,28 @@
+
+name: Build Chicago Burnout
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: devkitpro/devkitarm:latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build game
+        run: make
+
+      - name: Upload build files
+        uses: actions/upload-artifact@v4
+        with:
+          name: ChicagoBurnout-3DSX
+          path: |
+            *.3dsx
+            *.elf
+          if-no-files-found: error
